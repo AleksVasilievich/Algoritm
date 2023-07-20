@@ -1,3 +1,5 @@
+package AlgoritmSeminar1;
+
 import java.util.Random;
 
 /**

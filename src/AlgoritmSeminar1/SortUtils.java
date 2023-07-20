@@ -1,3 +1,5 @@
+package AlgoritmSeminar1;
+
 public class SortUtils {
     /**
      * Сортировка выбором

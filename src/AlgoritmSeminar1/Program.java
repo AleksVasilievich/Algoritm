@@ -1,3 +1,7 @@
+package AlgoritmSeminar1;
+
+import AlgoritmSeminar1.ArrayUtils;
+
 public class Program {
 
     public static void main(String[] args) {
