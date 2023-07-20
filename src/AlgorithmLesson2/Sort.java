@@ -6,12 +6,15 @@ public class Sort {
         int[] array = new int[] {
                 4, 2, 5, 7, 6, 8, 1, -7, 3, 9
         };
-        dirertSort(array);
+        insertSort(array);
+        //directSort(array);
+        //bubbleSort(array);
 
         for (int i = 0; i < array.length; i++){
             System.out.print(array[i] +  " ");
         }
     }
+    // Пузырьковая сортировка
 
     public static void bubbleSort(int[] array){
         boolean finish;
@@ -29,7 +32,9 @@ public class Sort {
         } while (!finish);
     }
 
-    public static void dirertSort(int[] array) {
+    // Сортировка выбором
+
+    public static void directSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int minPosithon = i;
             for (int j = i + 1; j < array.length; j++) {
@@ -44,4 +49,18 @@ public class Sort {
             }
         }
     }
+    // Сортировка вставками
+
+    public static void insertSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+    }
+
 }
