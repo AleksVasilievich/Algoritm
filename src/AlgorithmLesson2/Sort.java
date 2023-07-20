@@ -32,7 +32,7 @@ public class Sort {
         } while (!finish);
     }
 
-    // Сортировка выбором
+    // Сортировка выбором .
 
     public static void directSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
