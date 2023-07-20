@@ -1,5 +1,7 @@
 package AlgorithmLesson2;
 
+// Сортировки сложностью O(n^2)
+
 public class Sort {
 
     public static void main(String[] args) {
