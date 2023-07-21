@@ -2,12 +2,14 @@ package AlgorithmLesson2;
 
 // Сортировки сложностью O(n^2)
 
+
 public class Sort {
 
     public static void main(String[] args) {
         int[] array = new int[] {
                 4, 2, 5, 7, 6, 8, 1, -7, 3, 9
         };
+        //quickSort(array, 0, 7);
         insertSort(array);
         //directSort(array);
         //bubbleSort(array);

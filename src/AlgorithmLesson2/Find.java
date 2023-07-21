@@ -13,7 +13,7 @@ public class Find {
         System.out.println(binarySearch(array,9)); // Вызов перегруженного метода
     }
 
-    public static int find(int[] array, int value) {
+    public static int find(int[] array, int value) {   //Поиск перебором
         for (int i = 0; i < array.length; i++) {
             if (array[i] == value) {
                 return  i;
