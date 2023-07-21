@@ -48,7 +48,4 @@ public class HeapSort {
             samleHeap(array, heapSize, maxNum);
         }
     }
-
-
-
 }
