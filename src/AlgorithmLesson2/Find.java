@@ -1,5 +1,8 @@
 package AlgorithmLesson2;
 
+// Алгоритм поиска , простой перебор O(n), бинарный поиск O(log n)
+
+
 public class Find {
     public static void main(String[] args) {
         int[] array = new int[] {
