@@ -69,14 +69,6 @@ public class List2 {
 
     public class Node {
 
-        public int getValue() {
-            return value;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
-        }
-
         int value;
         Node next;
     }
