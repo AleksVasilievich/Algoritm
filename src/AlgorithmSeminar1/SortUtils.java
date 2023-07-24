@@ -1,4 +1,4 @@
-package AlgoritmSeminar1;
+package AlgorithmSeminar1;
 
 public class SortUtils {
     /**

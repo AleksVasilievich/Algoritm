@@ -1,6 +1,4 @@
-package AlgoritmSeminar1;
-
-import AlgoritmSeminar1.ArrayUtils;
+package AlgorithmSeminar1;
 
 public class Program {
 
