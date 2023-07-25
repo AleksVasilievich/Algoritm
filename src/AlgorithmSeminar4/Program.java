@@ -13,5 +13,8 @@ public class Program {
         String v = hashMap.put("+7903", "Сергей");
         v = hashMap.put("+7904", "Николай");
         v = hashMap.put("+7904", "Юрий");
+
+        String searchRes = hashMap.get("+7903");
+        System.out.println(searchRes);
     }
 }
