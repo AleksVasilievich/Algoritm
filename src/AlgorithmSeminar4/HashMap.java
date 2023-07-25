@@ -53,6 +53,29 @@ public class HashMap<K, V> {
             }
             return  null;
         }
+
+        public V remove(K key) {
+            if (head == null)
+                return null;
+            if (head.value.key.equals(key)) {
+                V buf = (V)head.value.value;
+                head = head.next;
+                return  buf;
+            }
+            else {
+                Node node = head;
+                while (node.next != null) {
+                    if (node.next.value.key.equals(key)) {
+                        V buf = (V)node.next.value.value;
+                        node.next = node.next.next;
+                        return buf;
+                    }
+                    node = node.next;
+                }
+                return  null;
+            }
+        }
+
     }
 
     private int calculateBucketIndex(K key){
@@ -79,8 +102,16 @@ public class HashMap<K, V> {
         if (bucket == null)
             return  null;
         return (V)bucket.get(key);
-
     }
+
+    public V remove(K key) {
+        int index = calculateBucketIndex(key);
+        Bucket bucket = buckets[index];
+        if (bucket == null)
+            return  null;
+        return (V)bucket.remove(key);
+    }
+
     public HashMap(){
         buckets = new Bucket[INIT_BUCKET_COUNT];
     }
