@@ -15,6 +15,7 @@ public class Program {
         v = hashMap.put("+7904", "Юрий");
 
         String searchRes = hashMap.get("+7903");
+        v = hashMap.remove("+7904");
         System.out.println(searchRes);
     }
 }

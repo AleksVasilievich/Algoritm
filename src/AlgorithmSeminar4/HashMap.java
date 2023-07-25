@@ -3,6 +3,11 @@ package AlgorithmSeminar4;
 public class HashMap<K, V> {
 
     private static final int INIT_BUCKET_COUNT = 16;
+    private  int size;
+
+    public int getSize() {
+        return size;
+    }
 
     private Bucket[] buckets;
 
@@ -93,7 +98,11 @@ public class HashMap<K, V> {
         entity.key = key;
         entity.value = value;
 
-        return (V)bucket.add(entity);
+        V res = (V)bucket.add(entity);
+        if (res == null) {
+            size++;
+        }
+        return res;
     }
 
     public V get(K key) {
@@ -109,7 +118,11 @@ public class HashMap<K, V> {
         Bucket bucket = buckets[index];
         if (bucket == null)
             return  null;
-        return (V)bucket.remove(key);
+        V res = (V)bucket.remove(key);
+        if (res != null) {
+            size--;
+        }
+        return res;
     }
 
     public HashMap(){
