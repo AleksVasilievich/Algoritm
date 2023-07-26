@@ -1,8 +1,12 @@
 package AlgorithmSeminar4;
 
-public class HashMap<K, V> {
+import java.util.Iterator;
+
+public class HashMap<K, V> implements Iterable{
 
     private static final int INIT_BUCKET_COUNT = 16;
+    private static final double LOAD_FACTOR = 0.5;
+
     private  int size;
 
     public int getSize() {
@@ -10,6 +14,22 @@ public class HashMap<K, V> {
     }
 
     private Bucket[] buckets;
+
+    @Override
+    public Iterator iterator() {
+        return new HashMapIterator();
+    }
+    class HashMapIterator implements Iterator{
+        @Override
+        public boolean hasNext() {
+            return false;
+        }
+
+        @Override
+        public Object next() {
+            return null;
+        }
+    }
 
     class Entity {
         K key;
@@ -87,7 +107,27 @@ public class HashMap<K, V> {
         return Math.abs(key.hashCode()) % buckets.length;
     }
 
+    private void recalculate(){
+        size = 0;
+        Bucket<K, V>[] old = buckets;
+        buckets = new Bucket[old.length * 2];
+        for (int i = 0; i < old.length; i++){
+            Bucket<K, V> bucket = old[i];
+            if (bucket != null){
+                Bucket.Node node = bucket.head;
+                while (node != null){
+                    put((K)node.value.key, (V)node.value.value);
+                    node = node.next;
+                }
+            }
+            old[i] = null;
+        }
+    }
+
     public V put(K key, V value){
+        if (buckets.length * LOAD_FACTOR <= size){
+            recalculate();
+        }
         int index = calculateBucketIndex(key);
         Bucket bucket = buckets[index];
         if (bucket == null) {
