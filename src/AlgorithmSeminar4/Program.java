@@ -1,6 +1,6 @@
 package AlgorithmSeminar4;
 
-import java.util.Objects;
+import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
@@ -9,6 +9,7 @@ public class Program {
         System.out.println(employee1.hashCode());
 
         HashMap<String, String> hashMap = new HashMap<>(4);
+
 
         String v = hashMap.put("+7903", "Сергей");
         v = hashMap.put("+7904", "Николай");
@@ -28,8 +29,11 @@ public class Program {
         v = hashMap.remove("+79005551127");
         System.out.println(v);
 
-//        for (Object e: hashMap) {
-//
-//        }
+
+
+//        for (Object e: hashMap){
+//            System.out.println(e);
+
+
     }
 }

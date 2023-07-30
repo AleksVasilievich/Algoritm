@@ -7,8 +7,8 @@ public class Program {
     public static void main(String[] args) {
         HashMap<String, String> hashMap = new  HashMap<>();
         String v = hashMap.put("+7903", "Сергей");
-        //v = hashMap.put("+7904", "Николай");
-        //v = hashMap.put("+7904", "Юрий");
+        v = hashMap.put("+7904", "Николай");
+        v = hashMap.put("+7904", "Юрий");
         System.out.println(v);
     }
 }
