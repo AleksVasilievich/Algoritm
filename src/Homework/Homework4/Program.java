@@ -1,7 +1,4 @@
-package AlgorithmSeminar4_1;
-
-
-
+package Homework.Homework4;
 
 public class Program {
     public static void main(String[] args) {
@@ -9,11 +6,14 @@ public class Program {
         System.out.println(employee1.getAge() + " " + employee1.getName());
         System.out.println(employee1.hashCode());
 
+
         HashMap<String, String> hashMap = new HashMap<>(4);
-        String v = hashMap.put("+7903", "Сергей");
-        v = hashMap.put("+7904", "Николай");
-        v = hashMap.put("+7904", "Юрий");
-        v = hashMap.put("+79005551123", "Сергей");
+
+
+        String v = hashMap.put("+79", "Сергей");
+        v = hashMap.put("+790", "Николай");
+        v = hashMap.put("+7", "Юрий");
+        v = hashMap.put("+79005551120", "Сергей");
         v = hashMap.put("+79005551123", "Алексей");
         v = hashMap.put("+79005551124", "Александр1");
         v = hashMap.put("+79005551125", "Александр2");
@@ -21,15 +21,16 @@ public class Program {
         v = hashMap.put("+79005551127", "Александр4");
         v = hashMap.put("+79005551128", "Александр5");
 
-        String searchRes = hashMap.get("+7903");
-        //v = hashMap.remove("+7904");
-        System.out.println(searchRes);
 
-        v = hashMap.remove("+79005551127");
-        System.out.println(v);
+        HashMap.HashMapIterator it = (HashMap.HashMapIterator) hashMap.iterator();
+        while (it.hasNext()) {
+            it.next();
 
-        System.out.println();
+            Object K = it.next().key;
+            Object V = it.next().value;
+            System.out.println(K + " - "  + V);
 
-
+        }
     }
 }
+
