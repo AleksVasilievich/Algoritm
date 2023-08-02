@@ -1,6 +1,6 @@
 package Homework.Homework4;
 import java.util.Iterator;
-public class HashMap<K, V> implements Iterable {
+public class HashMap<K, V> implements Iterable<HashMap.Entity> {
 
         private static final int INIT_BUCKET_COUNT = 16;
         private static final double LOAD_FACTOR = 0.5;
