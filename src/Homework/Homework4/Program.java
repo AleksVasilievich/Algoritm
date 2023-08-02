@@ -10,9 +10,9 @@ public class Program {
         HashMap<String, String> hashMap = new HashMap<>(4);
 
 
-        String v = hashMap.put("+79", "Сергей");
-        v = hashMap.put("+790", "Николай");
-        v = hashMap.put("+7", "Юрий");
+        String v = hashMap.put("+79746354676", "Сергей");
+        v = hashMap.put("+79045354534", "Николай");
+        v = hashMap.put("+73462875439", "Юрий");
         v = hashMap.put("+79005551120", "Сергей");
         v = hashMap.put("+79005551123", "Алексей");
         v = hashMap.put("+79005551124", "Александр1");
@@ -20,6 +20,8 @@ public class Program {
         v = hashMap.put("+79005551126", "Александр3");
         v = hashMap.put("+79005551127", "Александр4");
         v = hashMap.put("+79005551128", "Александр5");
+
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++");
 
 
         HashMap.HashMapIterator it = (HashMap.HashMapIterator) hashMap.iterator();
@@ -30,6 +32,14 @@ public class Program {
             Object V = it.next().value;
             System.out.println(K + " - "  + V);
 
+        }
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+
+
+        for (HashMap.HashMapIterator it1 = (HashMap.HashMapIterator) hashMap.iterator(); it1.hasNext(); ) {
+            Object entity = it1.next().key;
+            Object entity1 = it1.next().value;
+            System.out.println(entity + " - " + entity1);
         }
     }
 }

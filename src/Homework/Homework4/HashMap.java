@@ -18,15 +18,15 @@ public class HashMap<K, V> implements Iterable {
         return new HashMapIterator();
     }
 
-        class HashMapIterator implements Iterator {
+        class HashMapIterator implements Iterator<Entity> {
 
             private int currentBucketIndex;
             private Bucket.Node currentNode;
 
-            public HashMapIterator() {
-                currentBucketIndex = 0;
-                currentNode = null;
-            }
+//            public HashMapIterator() {
+//                currentBucketIndex = 0;
+//                currentNode = null;
+//            }
 
             @Override
             public boolean hasNext() {
